@@ -100,7 +100,7 @@ POST http://localhost:8080/ordenescompra
   }
 }
 👨‍🎓 Autor
-Ricardo Coello Palomino
+Anjeli Verastigue Tjeda
 Curso: Desarrollo de Aplicaciones Web Avanzado
 Sección: 5 - C24 - A - B
 
