@@ -124,15 +124,9 @@ Hacer pruebas con datos variados para asegurar el correcto funcionamiento del CR
 
 Mantener actualizado el archivo application.properties con credenciales válidas.
 
-Subir el proyecto a GitHub con una buena documentación (como este README).
 
-yaml
-Copiar
-Editar
 
----
 
-Puedes copiar todo el bloque de arriba y pegarlo directamente en tu archivo `README.md` en tu repositorio de GitHub. Si necesitas incluir imágenes, instrucciones adicionales o el link del repositorio, también puedo ayudarte a agregarlos.
 
 
 
