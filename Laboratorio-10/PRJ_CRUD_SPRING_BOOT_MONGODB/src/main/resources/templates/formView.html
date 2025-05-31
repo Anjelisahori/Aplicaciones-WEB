@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title th:text="${titulo}">Formulario</title>
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
+</head>
+<body>
+<div class="container mt-4">
+    <h2 th:text="${titulo}"></h2>
+    <form th:action="@{/form}" th:object="${curso}" method="post">
+        <div class="form-group">
+            <label for="nombre">Nombre</label>
+            <input type="text" th:field="*{nombre}" class="form-control" placeholder="Ingrese nombre"/>
+            <small class="form-text text-danger" th:if="${#fields.hasErrors('nombre')}" th:errors="*{nombre}"></small>
+        </div>
+        <div class="form-group">
+            <label for="creditos">Créditos</label>
+            <input type="number" th:field="*{creditos}" class="form-control" placeholder="Ingrese créditos"/>
+            <small class="form-text text-danger" th:if="${#fields.hasErrors('creditos')}" th:errors="*{creditos}"></small>
+        </div>
+        <button type="submit" class="btn btn-primary">Guardar</button>
+        <a class="btn btn-secondary" th:href="@{/listar}">Cancelar</a>
+    </form>
+</div>
+</body>
+</html>
