@@ -1,97 +1,111 @@
-# Laboratorio 10 - CRUD con Spring Boot y MongoDB
+🧪 Laboratorio 10 - Aplicaciones Web con Spring Boot: CRUD para Curso y Alumno
 
-## Descripción
+📚 Descripción  
+Este proyecto consiste en el desarrollo de una aplicación web con Spring Boot para gestionar dos entidades principales: Curso y Alumno. Se implementaron operaciones CRUD (Crear, Leer, Actualizar, Eliminar) para ambas tablas, permitiendo la administración básica de datos en una base de datos relacional.
 
-Este laboratorio consiste en la creación de un proyecto Spring Boot que implementa operaciones CRUD (Crear, Leer, Actualizar y Eliminar) para dos entidades principales: **Curso** y **Alumno**. Utilizamos MongoDB como base de datos NoSQL para almacenar la información y Thymeleaf para la presentación web.
+🛠️ Tecnologías usadas  
+- Java 17+  
+- Spring Boot  
+- Spring Web  
+- Spring Data JPA  
+- Thymeleaf  
+- Bootstrap  
+- Base de datos H2 (en memoria) o MySQL  
+- IntelliJ IDEA o Spring Tool Suite  
 
----
-
-## Estructura del proyecto
-
-PRJ_CRUD_SPRING_BOOT_MONGODB
-│
-├── src
-│ └── main
-│ ├── java
-│ │ └── com.tecsup.demo
-│ │ ├── controladores
+🗃️ Estructura del proyecto  
+src/
+├── main/
+│ ├── java/com/tecsup/demo/
+│ │ ├── controller/
 │ │ │ ├── CursoController.java
 │ │ │ └── AlumnoController.java
-│ │ ├── modelo
-│ │ │ ├── documents
-│ │ │ │ ├── Curso.java
-│ │ │ │ └── Alumno.java
-│ │ │ └── daos
+│ │ ├── model/
+│ │ │ ├── Curso.java
+│ │ │ └── Alumno.java
+│ │ ├── repository/
 │ │ │ ├── CursoRepository.java
 │ │ │ └── AlumnoRepository.java
-│ │ └── servicios
-│ │ ├── CursoService.java
-│ │ ├── CursoServiceImpl.java
-│ │ ├── AlumnoService.java
-│ │ └── AlumnoServiceImpl.java
-│ └── resources
-│ ├── templates
-│ │ ├── listarView.html
-│ │ ├── formView.html
-│ │ ├── listarAlumnos.html
-│ │ ├── formAlumno.html
-│ │ └── index.html
+│ │ └── DemoApplication.java
+│ └── resources/
+│ ├── templates/
+│ │ ├── listarCurso.html
+│ │ ├── listarAlumno.html
+│ │ ├── formCurso.html
+│ │ └── formAlumno.html
 │ └── application.properties
----
 
-## Funcionalidades
+⚙️ Configuración - application.properties  
+```properties
+spring.datasource.url=jdbc:h2:mem:testdb
+spring.datasource.driverClassName=org.h2.Driver
+spring.datasource.username=sa
+spring.datasource.password=
+spring.jpa.hibernate.ddl-auto=update
+spring.h2.console.enabled=true
+spring.jpa.show-sql=true
+spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.H2Dialect
+Puedes cambiar a MySQL configurando las propiedades correspondientes.
 
-- Listar, crear, editar y eliminar cursos.
-- Listar, crear, editar y eliminar alumnos.
-- Validación de formularios usando anotaciones `@Valid` en las entidades.
-- Navegación amigable entre vistas con Thymeleaf.
-- Página principal (index.html) para elegir entre gestión de cursos o alumnos.
+🔗 Endpoints disponibles
 
----
+Cursos
 
-## Tecnologías usadas
+GET /cursos → Listar todos los cursos
 
-- Java 17+
-- Spring Boot
-- Spring Data MongoDB
-- MongoDB
-- Thymeleaf
-- Bootstrap 4 (para estilos rápidos y responsivos)
-- Maven
+GET /cursos/form → Formulario para crear curso
 
----
+POST /cursos → Guardar curso
 
-## Cómo ejecutar el proyecto
+GET /cursos/form/{id} → Formulario para editar curso
 
-1. Asegúrate de tener MongoDB instalado y corriendo en tu máquina local.
-2. Clona o descarga este repositorio.
-3. Configura la conexión a MongoDB en `application.properties` (por defecto localhost y puerto 27017).
-4. Ejecuta el proyecto desde tu IDE favorito o usando Maven:
+GET /cursos/eliminar/{id} → Eliminar curso
 
-   ```bash
-   mvn spring-boot:run
-Accede a la aplicación vía navegador web:
+Alumnos
 
-Página principal: http://localhost:8080/
+GET /alumnos → Listar todos los alumnos
 
-Gestión de cursos: http://localhost:8080/listar
+GET /alumnos/form → Formulario para crear alumno
 
-Gestión de alumnos: http://localhost:8080/alumnos
+POST /alumnos → Guardar alumno
 
-Consideraciones
-La validación en los formularios garantiza que los datos ingresados cumplan con los requisitos mínimos antes de ser almacenados.
+GET /alumnos/form/{id} → Formulario para editar alumno
 
-La estructura del proyecto sigue una arquitectura en capas para facilitar la escalabilidad y mantenimiento.
+GET /alumnos/eliminar/{id} → Eliminar alumno
 
-Se utilizaron las mejores prácticas de Spring Boot para inyección de dependencias y manejo de sesiones.
+🧪 Pruebas en navegador
 
-Conclusiones
-La práctica me permitió consolidar conocimientos sobre CRUD en aplicaciones Spring Boot con bases NoSQL.
+Accede a http://localhost:8080 para ver la página principal con opciones para cursos y alumnos.
 
-Entendí la importancia de la separación de responsabilidades en la arquitectura de software.
+Navega a /cursos o /alumnos para listar y administrar cada entidad.
 
-Aprendí a integrar Thymeleaf con validaciones y formularios para crear interfaces dinámicas y amigables.
+Utiliza los formularios para crear o editar registros.
 
-Comprendí cómo gestionar múltiples entidades con funcionalidades similares reutilizando código y patrones.
+👨‍🎓 Autor
+Anjeli Verastigue Tejeda
+Curso: Desarrollo de Aplicaciones Web Avanzado
+Sección: 5 - C24 - A - B
 
-Mejoré mi manejo de rutas y navegación web para una mejor experiencia del usuario.
+✅ Conclusiones
+
+Comprendí cómo crear una aplicación Spring Boot con dos entidades relacionadas.
+
+Aprendí a implementar CRUDs completos usando Spring Data JPA y Thymeleaf para la interfaz.
+
+Mejoré mi manejo de rutas y controladores para la gestión de cursos y alumnos.
+
+Pude integrar Bootstrap para mejorar la apariencia visual de las páginas web.
+
+Reconocí la importancia de separar responsabilidades en capas (modelo, repositorio, controlador, vista).
+
+📌 Recomendaciones
+
+Verificar que el servidor de base de datos esté activo antes de ejecutar la app (si usas MySQL).
+
+Probar cada función del CRUD para asegurar su correcto funcionamiento.
+
+Mantener las dependencias y versiones de Spring Boot actualizadas.
+
+Usar nombres claros y consistentes para controladores, rutas y vistas.
+
+Documentar el proyecto para facilitar futuras mejoras o mantenimiento.
