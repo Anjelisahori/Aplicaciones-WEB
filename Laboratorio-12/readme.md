@@ -2,8 +2,6 @@
 
 Este proyecto es parte del **Laboratorio 12** del curso, donde se desarrollaron dos módulos funcionales: `Estudiantes` y `Personas`, aplicando el patrón MVC en Java con **Spring Boot**, vistas con **Thymeleaf**, y estilos modernos con **Bootstrap (Bootswatch)**.
 
----
-
 ## 📁 Estructura del Proyecto
 
 📦src
@@ -21,10 +19,8 @@ Este proyecto es parte del **Laboratorio 12** del curso, donde se desarrollaron 
 ┃ ┃ ┃ ┣ estudiantes.html
 ┃ ┃ ┣ application.properties
 
-yaml
+markdown
 Copiar código
-
----
 
 ## 🚀 Funcionalidades
 
@@ -35,41 +31,32 @@ Copiar código
 
 ### ✔️ Módulo Estudiantes
 - Formulario para registrar/editar estudiantes (nombre, apellido, correo, carrera).
-- Vista `estudiantes.html` con una tabla de estudiantes.
+- Vista `lista.html` con una tabla de estudiantes.
 - Acciones: **Editar**, **Eliminar** y **Agregar nuevo**.
 - Formularios responsivos y diseño moderno con Bootstrap (tema Flatly).
 
----
-
 ## 🛠️ Tecnologías Usadas
 
-- ☕ **Java 17+**
-- ⚙️ **Spring Boot 3**
-- 🌐 **Thymeleaf**
-- 🎨 **Bootstrap 5**
-- 🧩 **Bootswatch (tema Flatly)**
-- 🛠️ **Maven**
-
----
+- **Java 17+**
+- **Spring Boot 3**
+- **Thymeleaf**
+- **Bootstrap 5**
+- **Bootswatch (tema Flatly)**
+- **Maven**
 
 ## 🌐 Interfaz
 
 Se usaron plantillas responsivas con Bootstrap para que las vistas sean:
-
-- ✅ Adaptables a móviles
-- ✅ Visualmente modernas
-- ✅ Funcionales para CRUD simple
-
----
+- Adaptables a móviles
+- Visualmente modernas
+- Funcionales para CRUD simple
 
 ## 📚 Aprendizajes
 
-- Comprendí cómo aplicar el patrón MVC con Spring Boot.
-- Aprendí a enviar datos del backend al frontend usando el objeto `Model`.
-- Practiqué la generación de tablas dinámicas con Thymeleaf (`th:each`, `th:text`).
-- Mejoré la interfaz de usuario sin necesidad de escribir CSS, gracias a Bootswatch.
-
----
+- Uso del patrón MVC con Spring Boot.
+- Envío de datos del backend al frontend con `Model`.
+- Generación dinámica de tablas con Thymeleaf (`th:each`, `th:text`).
+- Mejora de interfaz con Bootswatch sin escribir CSS manual.
 
 ## ✅ Ejecución
 
@@ -81,26 +68,5 @@ Se usaron plantillas responsivas con Bootstrap para que las vistas sean:
 
 ---
 
-## ✅ Conclusiones
-
-1. Reforcé el uso de Spring Boot y Thymeleaf para desarrollar aplicaciones web funcionales.
-2. Entendí cómo estructurar correctamente un proyecto con controlador, modelo y vista (MVC).
-3. Aplicar Bootstrap con temas como Flatly facilita el diseño de interfaces sin usar CSS manual.
-4. Pude conectar datos entre el backend y las vistas dinámicamente.
-5. Este laboratorio me ayudó a practicar CRUD básico y mejorar la presentación del frontend.
-
----
-
-## 📌 Recomendaciones
-
-- Mantener nombres claros y coherentes en controladores, rutas y archivos HTML.
-- Probar bien cada funcionalidad del CRUD para validar su correcto funcionamiento.
-- Aplicar un diseño consistente entre vistas para mejorar la experiencia del usuario.
-- Utilizar temas de Bootswatch para modernizar la interfaz sin escribir CSS.
-- Comentar el código si se va a escalar o presentar como parte de un proyecto mayor.
-
----
-
-**Autor:** Anjeli Verastigue Tejeda  
-**Curso:** Desarrollo de Aplicaciones Web  
-**Sección:** 5 - C24 - A - B
+**Autor:** [Anjeli Verastigue Tejeda]  
+**Curso:** Desarrollo de Aplicaciones Web 
