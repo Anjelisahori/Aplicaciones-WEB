@@ -2,42 +2,50 @@
 
 ## 📚 Descripción
 
-Este proyecto consiste en el desarrollo de una aplicación web con **Spring Boot**, utilizando **Spring Data JPA** para la persistencia de datos. Se implementa un CRUD completo para dos entidades relacionadas: **Laboratorio** y **OrdenCompra**, almacenadas en una base de datos MySQL.
+Este proyecto consiste en el desarrollo de una aplicación web con **Spring Boot**, utilizando **Spring Data JPA** para la persistencia de datos. Se implementa un CRUD completo para dos entidades relacionadas: **Laboratorio** y **OrdenCompra**, almacenadas en una base de datos **MySQL**.
 
-## 🛠️ Tecnologías usadas
+---
 
-- Java 17+
-- Spring Boot
-- Spring Web
-- Spring Data JPA
-- MySQL
-- Postman (para pruebas)
-- IntelliJ IDEA o Spring Tool Suite
-- Git y GitHub
+## 🛠️ Tecnologías Usadas
 
-## 🗃️ Estructura del proyecto
+- ☕ Java 17+
+- ⚙️ Spring Boot
+- 🌐 Spring Web
+- 🗃️ Spring Data JPA
+- 🐬 MySQL
+- 📮 Postman (para pruebas de API)
+- 🖥️ IntelliJ IDEA o Spring Tool Suite
+- 🧑‍💻 Git y GitHub
 
-src/
-├── main/
-│ ├── java/com/tecsup/demo/
-│ │ ├── controller/
-│ │ │ ├── LaboratorioController.java
-│ │ │ └── OrdenCompraController.java
-│ │ ├── model/
-│ │ │ ├── Laboratorio.java
-│ │ │ └── OrdenCompra.java
-│ │ ├── repository/
-│ │ │ ├── LaboratorioRepository.java
-│ │ │ └── OrdenCompraRepository.java
-│ │ └── DemoApplication.java
-│ └── resources/
-│ └── application.properties
+---
 
-pgsql
-Copiar
-Editar
+## 📦 Estructura del Proyecto
 
-## ⚙️ Configuración - `application.properties`
+📦 src
+┣ 📂 main
+┃ ┣ 📂 java
+┃ ┃ ┗ 📂 com
+┃ ┃ ┃ ┗ 📂 tecsup
+┃ ┃ ┃ ┃ ┗ 📂 demo
+┃ ┃ ┃ ┃ ┣ 📂 controller
+┃ ┃ ┃ ┃ ┃ ┣ LaboratorioController.java
+┃ ┃ ┃ ┃ ┃ ┗ OrdenCompraController.java
+┃ ┃ ┃ ┃ ┣ 📂 model
+┃ ┃ ┃ ┃ ┃ ┣ Laboratorio.java
+┃ ┃ ┃ ┃ ┃ ┗ OrdenCompra.java
+┃ ┃ ┃ ┃ ┣ 📂 repository
+┃ ┃ ┃ ┃ ┃ ┣ LaboratorioRepository.java
+┃ ┃ ┃ ┃ ┃ ┗ OrdenCompraRepository.java
+┃ ┃ ┃ ┃ ┗ DemoApplication.java
+┃ ┗ 📂 resources
+┃ ┃ ┗ application.properties
+
+yaml
+Copiar código
+
+---
+
+## ⚙️ Configuración – `application.properties`
 
 ```properties
 spring.application.name=Laboratorio-11
@@ -49,10 +57,10 @@ spring.datasource.password=
 spring.jpa.hibernate.ddl-auto=update
 spring.jpa.show-sql=true
 spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQL8Dialect
-💡 Asegúrate de crear la base de datos bd_farmacia en MySQL antes de ejecutar la aplicación.
+💡 Importante: Asegúrate de crear la base de datos bd_farmacia en MySQL antes de ejecutar la aplicación.
 
-🔗 Endpoints disponibles
-Laboratorio
+🔗 Endpoints Disponibles
+🧪 Laboratorio
 POST /laboratorios → Crear laboratorio
 
 GET /laboratorios → Listar todos los laboratorios
@@ -61,7 +69,7 @@ PUT /laboratorios/{id} → Actualizar laboratorio
 
 DELETE /laboratorios/{id} → Eliminar laboratorio
 
-OrdenCompra
+📄 Orden de Compra
 POST /ordenescompra → Crear orden de compra
 
 GET /ordenescompra → Listar todas las órdenes de compra
@@ -71,12 +79,12 @@ PUT /ordenescompra/{id} → Actualizar orden de compra
 DELETE /ordenescompra/{id} → Eliminar orden de compra
 
 🧪 Pruebas con Postman
-Crear laboratorio
-json
-Copiar
-Editar
+✅ Crear Laboratorio
+h
+Copiar código
 POST http://localhost:8080/laboratorios
-
+json
+Copiar código
 {
   "razonSocial": "LabTec",
   "direccion": "Av. Ciencia 123",
@@ -84,12 +92,12 @@ POST http://localhost:8080/laboratorios
   "email": "labtec@correo.com",
   "contacto": "Luis Torres"
 }
-Crear orden de compra
-json
-Copiar
-Editar
+✅ Crear Orden de Compra
+http
+Copiar código
 POST http://localhost:8080/ordenescompra
-
+json
+Copiar código
 {
   "fechaEmision": "2024-05-30",
   "situacion": "Pendiente",
@@ -100,36 +108,30 @@ POST http://localhost:8080/ordenescompra
   }
 }
 👨‍🎓 Autor
-Anjeli Verastigue Tjeda
+Nombre: Anjeli Verastigue Tejeda
+
 Curso: Desarrollo de Aplicaciones Web Avanzado
+
 Sección: 5 - C24 - A - B
 
 ✅ Conclusiones
-Comprendí cómo desarrollar una aplicación web utilizando el framework Spring Boot y la herramienta Spring Data JPA.
+Comprendí cómo desarrollar una aplicación web usando Spring Boot y Spring Data JPA.
 
-Aprendí a crear y configurar entidades relacionadas para su persistencia en una base de datos MySQL.
+Aprendí a crear y relacionar entidades para ser persistidas en una base de datos MySQL.
 
-Fortalecí mis habilidades para construir endpoints REST y realizar pruebas utilizando Postman.
+Fortalecí mis habilidades construyendo endpoints REST y realizando pruebas con Postman.
 
-Pude aplicar buenas prácticas de estructuración del proyecto utilizando controladores, repositorios y modelos.
+Apliqué buenas prácticas separando responsabilidades en controladores, modelos y repositorios.
 
-Reconocí la importancia del uso de anotaciones de JPA como @ManyToOne y @JoinColumn para manejar relaciones entre tablas.
+Reconocí la importancia de las anotaciones JPA como @ManyToOne y @JoinColumn para manejar relaciones entre tablas.
 
 📌 Recomendaciones
-Verificar que MySQL esté activo antes de ejecutar la aplicación.
+Verificar que el servicio de MySQL esté activo antes de ejecutar.
 
-Utilizar nombres descriptivos para clases y rutas REST.
+Usar nombres claros y descriptivos en clases, rutas y variables.
 
-Hacer pruebas con datos variados para asegurar el correcto funcionamiento del CRUD.
+Realizar pruebas CRUD con diferentes datos para validar el comportamiento.
 
-Mantener actualizado el archivo application.properties con credenciales válidas.
+Mantener application.properties actualizado y seguro.
 
-
-
-
-
-
-
-
-
-
+Documentar bien los endpoints y la estructura para facilitar mantenimiento futuro.

@@ -1,46 +1,61 @@
-🧪 Laboratorio 9 - Desarrollo de Aplicaciones Web con Spring Boot
+# 🧪 Laboratorio 9 - Desarrollo de Aplicaciones Web con Spring Boot
 
-📚 Descripción  
-En este laboratorio se desarrolló una aplicación web con Spring Boot para gestionar la entidad Curso y posteriormente Alumno, implementando operaciones CRUD completas. Se configuró una base de datos MySQL para almacenar la información y se trabajó con los principios de inyección de dependencias y manejo de repositorios en Spring.
+## 📚 Descripción
 
-🛠️ Tecnologías usadas  
-- Java 17+  
-- Spring Boot  
-- Spring Web  
-- Spring Data JPA  
-- MySQL  
-- Thymeleaf  
-- IntelliJ IDEA o Spring Tool Suite  
+En este laboratorio se desarrolló una aplicación web con **Spring Boot** para gestionar las entidades **Curso** y **Alumno**, implementando operaciones **CRUD completas**. Se conectó una base de datos **MySQL**, y se aplicaron conceptos como **inyección de dependencias**, uso de **repositorios JPA**, y vistas dinámicas con **Thymeleaf**.
 
-🗃️ Estructura del proyecto  
-src/
-├── main/
-│ ├── java/com/tu_usuario/proyecto/
-│ │ ├── controller/
-│ │ │ ├── CursoController.java
-│ │ │ └── AlumnoController.java
-│ │ ├── model/
-│ │ │ ├── Curso.java
-│ │ │ └── Alumno.java
-│ │ ├── repository/
-│ │ │ ├── CursoRepository.java
-│ │ │ └── AlumnoRepository.java
-│ │ ├── service/
-│ │ │ ├── CursoService.java
-│ │ │ ├── CursoServiceImpl.java
-│ │ │ ├── AlumnoService.java
-│ │ │ └── AlumnoServiceImpl.java
-│ │ └── Application.java
-│ └── resources/
-│ ├── templates/
-│ │ ├── listarCursoView.html
-│ │ ├── formCursoView.html
-│ │ ├── listarAlumnoView.html
-│ │ └── formAlumnoView.html
-│ └── application.properties
+---
 
+## 🛠️ Tecnologías Usadas
 
-⚙️ Configuración - application.properties  
+- ☕ Java 17+
+- ⚙️ Spring Boot
+- 🌐 Spring Web
+- 🗃️ Spring Data JPA
+- 🐬 MySQL
+- 🎨 Thymeleaf
+- 🖥️ IntelliJ IDEA o Spring Tool Suite
+
+---
+
+## 📦 Estructura del Proyecto
+
+📦 src
+┣ 📂 main
+┃ ┣ 📂 java
+┃ ┃ ┣ 📂 com
+┃ ┃ ┃ ┗ 📂 tu_usuario
+┃ ┃ ┃ ┃ ┗ 📂 proyecto
+┃ ┃ ┃ ┃ ┣ 📂 controller
+┃ ┃ ┃ ┃ ┃ ┣ CursoController.java
+┃ ┃ ┃ ┃ ┃ ┗ AlumnoController.java
+┃ ┃ ┃ ┃ ┣ 📂 model
+┃ ┃ ┃ ┃ ┃ ┣ Curso.java
+┃ ┃ ┃ ┃ ┃ ┗ Alumno.java
+┃ ┃ ┃ ┃ ┣ 📂 repository
+┃ ┃ ┃ ┃ ┃ ┣ CursoRepository.java
+┃ ┃ ┃ ┃ ┃ ┗ AlumnoRepository.java
+┃ ┃ ┃ ┃ ┣ 📂 service
+┃ ┃ ┃ ┃ ┃ ┣ CursoService.java
+┃ ┃ ┃ ┃ ┃ ┣ CursoServiceImpl.java
+┃ ┃ ┃ ┃ ┃ ┣ AlumnoService.java
+┃ ┃ ┃ ┃ ┃ ┗ AlumnoServiceImpl.java
+┃ ┃ ┃ ┃ ┗ Application.java
+┃ ┗ 📂 resources
+┃ ┃ ┣ 📂 templates
+┃ ┃ ┃ ┣ listarCursoView.html
+┃ ┃ ┃ ┣ formCursoView.html
+┃ ┃ ┃ ┣ listarAlumnoView.html
+┃ ┃ ┃ ┗ formAlumnoView.html
+┃ ┃ ┗ application.properties
+
+yaml
+Copiar código
+
+---
+
+## ⚙️ Configuración – `application.properties`
+
 ```properties
 spring.datasource.url=jdbc:mysql://localhost:3306/escuela
 spring.datasource.username=root
@@ -48,49 +63,56 @@ spring.datasource.password=
 spring.jpa.hibernate.ddl-auto=update
 spring.jpa.show-sql=true
 spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQL8Dialect
-Asegúrate de crear la base de datos escuela en MySQL antes de ejecutar la aplicación.
+📌 Nota: Asegúrate de crear la base de datos escuela en MySQL antes de ejecutar la aplicación.
 
-🔗 Funcionalidades implementadas
+🔗 Funcionalidades Implementadas
+✅ CRUD completo para Curso: crear, listar, editar, eliminar.
 
-CRUD para la entidad Curso: creación, listado, edición y eliminación de cursos.
+✅ CRUD completo para Alumno: crear, listar, editar, eliminar.
 
-CRUD para la entidad Alumno: creación, listado, edición y eliminación de alumnos.
+🔄 Uso de interfaces y servicios con inyección de dependencias.
 
-Configuración e inyección de dependencias usando Spring Boot.
+🧠 Separación de lógica en capas: Controlador, Servicio, Repositorio.
 
-Uso de Thymeleaf para las vistas de formularios y listados.
+👁️ Interfaz HTML dinámica con Thymeleaf para formularios y tablas.
 
-🧪 Ejecución
+▶️ Ejecución
+Ejecuta la aplicación Spring Boot desde tu IDE o terminal.
 
-Ejecutar la aplicación Spring Boot desde el IDE o línea de comandos.
+Accede desde el navegador a:
 
-Acceder a las rutas /cursos y /alumnos para gestionar las entidades desde el navegador.
+http://localhost:8080/cursos
 
-Verificar los datos en la base de datos MySQL para confirmar las operaciones CRUD.
+http://localhost:8080/alumnos
+
+Verifica los datos en la base de datos MySQL.
 
 👨‍🎓 Autor
-Anjeli Verastigue Tejeda
+Nombre: Anjeli Verastigue Tejeda
+
 Curso: Desarrollo de Aplicaciones Web Avanzado
+
 Sección: 5 - C24 - A - B
 
 ✅ Conclusiones
+Comprendí cómo organizar correctamente carpetas y clases en un proyecto Spring Boot.
 
-Entendí la importancia de una buena estructura de carpetas y clases para organizar proyectos Spring Boot.
+Aprendí a conectar la aplicación con MySQL usando application.properties.
 
-Configurar correctamente application.properties facilita la conexión con MySQL y la gestión de la base de datos.
+Reforcé el uso de interfaces, servicios y repositorios para manejar la lógica del sistema.
 
-Comprendí mejor el uso de interfaces y la inyección de dependencias para manejar repositorios y servicios en Spring Boot.
+Implementar el CRUD para Curso y Alumno me ayudó a practicar el desarrollo completo de una app web.
 
-Practicar el CRUD para las entidades Curso y Alumno reforzó mis conocimientos en desarrollo web con Spring Boot.
-
-La práctica constante con proyectos me dio más seguridad y entendimiento en la implementación de aplicaciones web con Spring Boot.
+Usar Thymeleaf facilitó la creación de vistas dinámicas y amigables.
 
 📌 Recomendaciones
+Verifica que el servidor MySQL esté encendido antes de ejecutar.
 
-Revisar que el servidor MySQL esté activo antes de iniciar la aplicación.
+Usa nombres claros y coherentes para las clases y vistas.
 
-Usar nombres claros y coherentes para controladores, servicios, repositorios y vistas.
+Prueba todas las operaciones CRUD para asegurarte de que funcionen bien.
 
-Probar todas las operaciones CRUD para validar el correcto funcionamiento.
+Mantén actualizado tu proyecto con las versiones estables de Spring y dependencias.
 
-Mantener el proyecto actualizado con las versiones recomendadas de Spring Boot y dependencias.
+yaml
+Copiar código

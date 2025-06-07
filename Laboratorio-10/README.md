@@ -1,41 +1,57 @@
-🧪 Laboratorio 10 - Aplicaciones Web con Spring Boot: CRUD para Curso y Alumno
+# 🧪 Laboratorio 10 - Aplicaciones Web con Spring Boot: CRUD para Curso y Alumno
 
-📚 Descripción  
-Este proyecto consiste en el desarrollo de una aplicación web con Spring Boot para gestionar dos entidades principales: Curso y Alumno. Se implementaron operaciones CRUD (Crear, Leer, Actualizar, Eliminar) para ambas tablas, permitiendo la administración básica de datos en una base de datos relacional.
+## 📚 Descripción
 
-🛠️ Tecnologías usadas  
-- Java 17+  
-- Spring Boot  
-- Spring Web  
-- Spring Data JPA  
-- Thymeleaf  
-- Bootstrap  
-- Base de datos H2 (en memoria) o MySQL  
-- IntelliJ IDEA o Spring Tool Suite  
+Este proyecto consiste en el desarrollo de una aplicación web con **Spring Boot** para gestionar dos entidades principales: **Curso** y **Alumno**. Se implementaron operaciones CRUD (Crear, Leer, Actualizar, Eliminar) para ambas tablas, permitiendo la administración básica de datos en una base de datos relacional.
 
-🗃️ Estructura del proyecto  
-src/
-├── main/
-│ ├── java/com/tecsup/demo/
-│ │ ├── controller/
-│ │ │ ├── CursoController.java
-│ │ │ └── AlumnoController.java
-│ │ ├── model/
-│ │ │ ├── Curso.java
-│ │ │ └── Alumno.java
-│ │ ├── repository/
-│ │ │ ├── CursoRepository.java
-│ │ │ └── AlumnoRepository.java
-│ │ └── DemoApplication.java
-│ └── resources/
-│ ├── templates/
-│ │ ├── listarCurso.html
-│ │ ├── listarAlumno.html
-│ │ ├── formCurso.html
-│ │ └── formAlumno.html
-│ └── application.properties
+---
 
-⚙️ Configuración - application.properties  
+## 🛠️ Tecnologías Usadas
+
+- ☕ Java 17+
+- ⚙️ Spring Boot
+- 🌐 Spring Web
+- 🗃️ Spring Data JPA
+- 🎨 Thymeleaf
+- 🎯 Bootstrap
+- 🐬 MySQL o 🧪 H2 (base de datos en memoria)
+- 🖥️ IntelliJ IDEA o Spring Tool Suite
+
+---
+
+## 📦 Estructura del Proyecto
+
+📦 src
+┣ 📂 main
+┃ ┣ 📂 java
+┃ ┃ ┗ 📂 com
+┃ ┃ ┃ ┗ 📂 tecsup
+┃ ┃ ┃ ┃ ┗ 📂 demo
+┃ ┃ ┃ ┃ ┣ 📂 controller
+┃ ┃ ┃ ┃ ┃ ┣ CursoController.java
+┃ ┃ ┃ ┃ ┃ ┗ AlumnoController.java
+┃ ┃ ┃ ┃ ┣ 📂 model
+┃ ┃ ┃ ┃ ┃ ┣ Curso.java
+┃ ┃ ┃ ┃ ┃ ┗ Alumno.java
+┃ ┃ ┃ ┃ ┣ 📂 repository
+┃ ┃ ┃ ┃ ┃ ┣ CursoRepository.java
+┃ ┃ ┃ ┃ ┃ ┗ AlumnoRepository.java
+┃ ┃ ┃ ┃ ┗ DemoApplication.java
+┃ ┣ 📂 resources
+┃ ┃ ┣ 📂 templates
+┃ ┃ ┃ ┣ listarCurso.html
+┃ ┃ ┃ ┣ listarAlumno.html
+┃ ┃ ┃ ┣ formCurso.html
+┃ ┃ ┃ ┗ formAlumno.html
+┃ ┃ ┗ application.properties
+
+yaml
+Copiar código
+
+---
+
+## ⚙️ Configuración – `application.properties`
+
 ```properties
 spring.datasource.url=jdbc:h2:mem:testdb
 spring.datasource.driverClassName=org.h2.Driver
@@ -45,12 +61,10 @@ spring.jpa.hibernate.ddl-auto=update
 spring.h2.console.enabled=true
 spring.jpa.show-sql=true
 spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.H2Dialect
-Puedes cambiar a MySQL configurando las propiedades correspondientes.
+🔁 Puedes cambiar la configuración para usar MySQL si lo deseas.
 
-🔗 Endpoints disponibles
-
-Cursos
-
+🔗 Endpoints Disponibles
+📘 Cursos
 GET /cursos → Listar todos los cursos
 
 GET /cursos/form → Formulario para crear curso
@@ -61,8 +75,7 @@ GET /cursos/form/{id} → Formulario para editar curso
 
 GET /cursos/eliminar/{id} → Eliminar curso
 
-Alumnos
-
+🧑‍🎓 Alumnos
 GET /alumnos → Listar todos los alumnos
 
 GET /alumnos/form → Formulario para crear alumno
@@ -73,39 +86,40 @@ GET /alumnos/form/{id} → Formulario para editar alumno
 
 GET /alumnos/eliminar/{id} → Eliminar alumno
 
-🧪 Pruebas en navegador
+🧪 Pruebas en Navegador
+Accede a: http://localhost:8080
 
-Accede a http://localhost:8080 para ver la página principal con opciones para cursos y alumnos.
+Navega a: /cursos o /alumnos para gestionar cada entidad
 
-Navega a /cursos o /alumnos para listar y administrar cada entidad.
+Usa los formularios para crear o editar registros
 
-Utiliza los formularios para crear o editar registros.
+Visualiza los cambios directamente en la base de datos H2 o MySQL
 
 👨‍🎓 Autor
-Anjeli Verastigue Tejeda
+Nombre: Anjeli Verastigue Tejeda
+
 Curso: Desarrollo de Aplicaciones Web Avanzado
+
 Sección: 5 - C24 - A - B
 
 ✅ Conclusiones
-
 Comprendí cómo crear una aplicación Spring Boot con dos entidades relacionadas.
 
-Aprendí a implementar CRUDs completos usando Spring Data JPA y Thymeleaf para la interfaz.
+Aprendí a implementar CRUDs completos usando Spring Data JPA y Thymeleaf.
 
-Mejoré mi manejo de rutas y controladores para la gestión de cursos y alumnos.
+Mejoré mi manejo de rutas y controladores en la web.
 
-Pude integrar Bootstrap para mejorar la apariencia visual de las páginas web.
+Apliqué Bootstrap para mejorar la apariencia visual.
 
-Reconocí la importancia de separar responsabilidades en capas (modelo, repositorio, controlador, vista).
+Valoré la importancia de separar las responsabilidades en capas (modelo, repositorio, controlador, vista).
 
 📌 Recomendaciones
+Asegurarse de que el servidor de base de datos esté activo (si usas MySQL).
 
-Verificar que el servidor de base de datos esté activo antes de ejecutar la app (si usas MySQL).
+Probar cada función del CRUD para verificar su correcto funcionamiento.
 
-Probar cada función del CRUD para asegurar su correcto funcionamiento.
+Mantener actualizadas las dependencias del proyecto.
 
-Mantener las dependencias y versiones de Spring Boot actualizadas.
-
-Usar nombres claros y consistentes para controladores, rutas y vistas.
+Usar nombres claros y coherentes en controladores, rutas y vistas.
 
 Documentar el proyecto para facilitar futuras mejoras o mantenimiento.
