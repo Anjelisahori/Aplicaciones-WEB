@@ -114,5 +114,3 @@ Prueba todas las operaciones CRUD para asegurarte de que funcionen bien.
 
 Mantén actualizado tu proyecto con las versiones estables de Spring y dependencias.
 
-yaml
-Copiar código
